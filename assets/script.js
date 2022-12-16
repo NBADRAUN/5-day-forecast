@@ -1,5 +1,5 @@
 //Global variables 
-var latlonapi = 'http://api.openweathermap.org/geo/1.0/direct?q='; 
+var latlonapi = 'https://api.openweathermap.org/geo/1.0/direct?q='; 
 var city = ''; 
 var apikey = '&appid=c04b3b1cca89bdcac938506e9ec8708a'; 
 var formbutton = document.getElementById('btn'); 
