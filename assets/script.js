@@ -22,7 +22,6 @@ document.addEventListener('click', function(event) {
     event.preventDefault();
     tommorow = new Date(date); 
         city = event.target.value; 
-        console.log(event.target.value)
         cardsection.innerHTML=""; 
         getlatlon(); 
   } else {
