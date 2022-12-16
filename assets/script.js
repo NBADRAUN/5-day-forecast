@@ -67,7 +67,7 @@ getweather();
 
 ///function to get weather infomration after determining the lat/lon to use//// 
 async function getweather() {
-  var deconsapi = 'http://api.openweathermap.org/data/2.5/forecast?lat='+lat+'&lon='+lon+'&units=imperial&appid=c04b3b1cca89bdcac938506e9ec8708a';
+  var deconsapi = 'https://api.openweathermap.org/data/2.5/forecast?lat='+lat+'&lon='+lon+'&units=imperial&appid=c04b3b1cca89bdcac938506e9ec8708a';
   var response = await fetch(deconsapi); 
   var weatherdata = await response.json(); 
   updatepage(); 
