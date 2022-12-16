@@ -1,43 +1,60 @@
+<!-- page header information -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5-day Weather</title>
-    <link rel="stylesheet" href="./assets/reset.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
-    />
-    <link rel="stylesheet" href="./assets/style.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  </head>
-  <body>
-    <section class="container ms-2">
-    <section class="hero bg-primary text-white text-center fs-1 pt-3 " style="height: 100px;"> 5-day Weather Forecast by City</section>
-    <div class="container text-center" >
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Page title -->
+  <title>5-day Weather</title>
+  <!-- link to bootstrap CSS file -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+  <!-- link to jquery UI CSS for search box -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+  <!-- link to local stylesheet -->
+  <link rel="stylesheet" href="./assets/style.css" />
+  <!-- jquery script links -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+</head>
+<!-- Page body -->
+<body>
+  <section class="container ms-2">
+    <section class="hero text-white text-center fs-2 pt-3 " style="height: 80px;"> 5-day Weather Forecast by City
+    </section>
+    <div class="container text-center">
       <div class="row">
-        <div class="col-3 border border-primary pt-2"style="height: 600px;">Search for a City:
-            <form class="border-bottom m-3">
+        <div class="col-4 pt-2 text-white text-center" style="height: 100;">Search for a City:
+          <!-- form to collect city name from user and search button -->
+          <form class="border-bottom m-1">
             <div class="mt-3">
-                <div class="ui-widget mt-3">
-                    <label for="tags">City: </label>
-                    <input id="tags">
-                    <button type="submit" class="btn btn-primary m-4">Submit</button>
-                  </div>
+              <div class="ui-widget mt-3 p-0">
+                <input id="city" style="width: 100px;" value="">
+                <button type="submit" class="btn btn-primary m-3" id="btn">Submit</button>
+                <!-- location to place dom generated previous search buttons -->
+                <section id='previoussearch' class="d-flex flex-column mb-3">Previous Searches:
+                </section>
               </div>
-            </form>
-            <section id="previoussearch">this is where prev searches will go</section>
-        </div>        
-        <div class="col-9 border border-primary"style="height: 600px;"></div>
+            </div>
+          </form>
+        </div>
+        <!-- location to add current weather infomration when generated -->
+        <div class="col-8 start-0">
+          <h3 id="cityname"></h3>
+          <ul id="currentweather" class="text-start"></ul>
+          <ul id="currentwind" class="text-start"></ul>
+          <ul id="currenthumidity" class="text-start"></ul>
+          <!-- card section to build cards for each day when generated -->
+          <div id="cardcontainer">
+            <div class='d-flex flex-row flex-wrap flex-xl-nowrap p-2 ' id='cardsection'>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-</section>
-  </body>
+    </div>
+  </section>
+  <!-- link to javascript file -->
+  <script src="./assets/script.js"></script>
+</body>
 </html>

@@ -1,1 +1,13 @@
 
+body {
+ height: 2000px;
+    /* background colors of page */
+  background-image: linear-gradient(
+    #03045e, #0077b6, #00b4d8, #4dddf6, #0bccf2
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Work Sans", sans-serif;
+}
+
+    
