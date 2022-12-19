@@ -54,13 +54,7 @@ function prevsearchbuttons() {
   document.getElementById('previoussearch').appendChild(buttons);
 
 };
-///function to get API data for lat/lon ///// 
-// async function getlatlon() {
-//   var response = await fetch(latlonapi+city+apikey); 
-//   var latlondata = await response.json(); 
-//   lat = latlondata[0].lat; 
-//   lon = latlondata[0].lon; 
-//   cityname = latlondata[0].name; 
+//async function to get latitude and longitude from mapquest to find the city name.  
 async function getlatlon() {
   var response = await fetch(mapquestlatlonapi + "=" + city);
   var latlondata = await response.json();
@@ -70,7 +64,7 @@ async function getlatlon() {
   getweather();
 }
 
-///function to get weather infomration after determining the lat/lon to use//// 
+///async function to get weather infomration after determining the lat/lon to use//// 
 async function getweather() {
   var deconsapi = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&units=imperial&appid=c04b3b1cca89bdcac938506e9ec8708a';
   var response = await fetch(deconsapi);
